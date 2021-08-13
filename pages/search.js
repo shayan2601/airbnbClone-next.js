@@ -3,6 +3,7 @@ import { useRouter } from "next/dist/client/router";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import InfoCard from "../components/InfoCard";
+import Map from "../components/Map";
 
 function Search({ jsonSearchResults }) {
   const router = useRouter();
@@ -47,6 +48,9 @@ function Search({ jsonSearchResults }) {
               </div>
             )
           )}
+        </section>
+        <section className="hidden xl:inline-flex xl:min-w-[500px]">
+          <Map jsonSearchResults={jsonSearchResults} />
         </section>
       </main>
       <Footer />
